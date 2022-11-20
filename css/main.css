@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+}
+
+body {
+    background-color: bisque;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+canvas {
+    cursor: grab;
+    border: 1px solid black;
+}
+
+canvas:active {
+    cursor: grabbing;
+}
+
+.funcs-сontainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.funcBlock input::-webkit-outer-spin-button,
+.funcBlock input::-webkit-inner-spin-button {
+    appearance: none;
+}
+
+.funcBlock {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2px;
+}
+
+.funcBlock input {
+    width: 80px;
+    height: 16px;
+    margin: 1px;
+    text-align: center;
+    outline: none;
+}
+
+.funcBlock input:hover{
+    border: none;
+    border-bottom: 2px solid cornflowerblue;
+}
+
+.container {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(212, 158, 86);
+    width: 30%;
+    height: 100vh;
+    max-height: 100vh;
+    scrollbar-gutter: stable;
+    top: 0;
+    left: 0;
+    transition: 1s;
+    transform: translateX(-100%);
+}
+
+.active-container {
+    transform: translateX(0%);
+}
+
+.menu-button {
+    position: absolute;
+    border-radius: 50%;
+    top: 5px;
+    right: -35px;
+    height: 30px;
+    width: 30px;
+    background-color: aqua;
+    cursor: pointer;
+    text-align: center;
+    font-size: 30px;
+    line-height: 30px;
+}
+
+.deleteFunc {
+    width: 15px;
+    height: 15px;
+    background-color: azure;
+    text-align: center;
+    line-height: 15px;
+    user-select: none;
+}
+
+.addFunction {
+    width: 90px;
+    height: 20px;
+    margin-top: 5px;
+    text-align: center;
+    background-color: azure;
+    user-select: none;
+}
+
+.addFunction:hover,
+.deleteFunc:hover {
+    cursor: pointer;
+}
