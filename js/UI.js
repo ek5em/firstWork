@@ -75,6 +75,7 @@ class UI {
         const input = document.createElement('input');
         input.dataset.num = this.num;
         input.addEventListener('keyup', (event) => handler(event));
+        input.addEventListener('change', (event) => handler(event));
         input.setAttribute('placeholder', placeholder);
         return input;
     }

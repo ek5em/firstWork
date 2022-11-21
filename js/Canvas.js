@@ -85,21 +85,19 @@ class Canvas {
     }
 
     polygon(points, color) {
-        this.context.fillStyle = color;
-        this.context.beginPath();
-        this.context.moveTo(this.xs(points[0].x), this.ys(points[0].y));
-        for (let i = 0; i < points.length; i++) {
-            this.context.lineTo(this.xs(points[i].x), this.ys(points[i].y));
-            
+        if (points.length >= 3) {
+            this.context.fillStyle = color;
+            this.context.beginPath();
+            this.context.moveTo(this.xs(points[0].x), this.ys(points[0].y));
+            for (let i = 1; i < points.length; i++) {
+                this.context.lineTo(this.xs(points[i].x), this.ys(points[i].y));
+
+            }
+            this.context.lineWidth = 4;
+            this.context.lineTo(this.xs(points[0].x), this.ys(points[0].y));
+            this.context.closePath();
+            this.context.fill();
         }
-        this.context.lineWidth = 4;
-        this.context.lineTo(this.xs(points[0].x), this.ys(points[0].y));
-        //this.context.stroke()
-        this.context.closePath();
-        this.context.fill();
-    };
-
-
-
+    }
 }
 

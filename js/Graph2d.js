@@ -1,6 +1,6 @@
 class Graph2d {
     constructor() {
-        const height = 800;
+        const height = 1000;
         const width = window.innerWidth;
 
         this.prop = width / height;
@@ -74,8 +74,8 @@ class Graph2d {
         }
     }
 
-    printIntegral(f, a, b, color = 'rgb(195, 119, 224, 0.6)') {
-        const dx = (b - a) / 1000;
+    printIntegral(f, a, b, integral, d = 100, color = 'rgb(195, 119, 224, 0.6)') {
+        const dx = (b - a) / d;
         let x = a;
         const points = [];
         points.push({ x: a, y: 0 })
@@ -83,9 +83,21 @@ class Graph2d {
             points.push({ x, y: f(x) });
             x += dx;
         }
+        points.push({ x: b, y: f(b) })
         points.push({ x: b, y: 0 })
         this.canvas.polygon(points, color);
         this.canvas.line(a, 0, b, 0, 2, 'orange');
+    }
+
+    getIntegral(f, a, b, d = 100) {
+        const dx = (b - a) / d;
+        let x = a;
+        let S = 0;
+        while (x <= b) {
+            S += (f(x) + f(x + dx)) / 2 * dx;
+            x += dx;
+        }
+        return S;
     }
 
 
@@ -194,9 +206,9 @@ class Graph2d {
                     }
                     if ((a || b) && a !== b) {
                         if (a > b) {
-                            this.printIntegral(f, b, a);
+                            this.printIntegral(f, b, a, this.getIntegral(f, b, a));
                         } else {
-                            this.printIntegral(f, a, b)
+                            this.printIntegral(f, a, b, this.getIntegral(f, a, b))
                         }
                     }
                 }
