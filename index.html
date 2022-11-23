@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/style.css'>
+    <script src='js/main.js'></script>
+    <script src='js/shooters.js'></script>
+    <script src="js/equation.js"></script>
+    <script src="js/Student.js"></script>
+    <script src="js/quest.js"></script>
+    <script src="js/questHandler.js"></script>
+    <script src="js/graph2D/Canvas.js"></script>
+    <script src="js/graph2D/Graph2d.js"></script>
+    <script src="js/graph2D/UI.js"></script>
+</head>
+
+<body>
+    <div class="menu">
+        <div class='menu-item activated' id="esseButton" data-content="esseContent" data-button="esseButton">Микро
+            сочинение</div>
+        <div class="menu-item" id="shotButton" data-content="shotContent" data-button="shotButton">Выстрел</div>
+        <div class="menu-item" id='shotsButton' data-content="shoterContent" data-button="shotsButton">Пулемёт</div>
+        <div class="menu-item" id='rootsButtom' data-content="rootsContent" data-button="rootsButtom">Корни уравнений
+        </div>
+        <div class="menu-item " id="RPGButton" data-content="RPGContent" data-button="RPGButton">РПГ</div>
+        <div class="menu-item " id="graphButton" data-content="graphContent" data-button="graphButton">Графики</div>
+    </div>
+    <div class="work-area">
+        <div class="content-item " id='esseContent'>
+            <div id="esse-area">
+                <h1 id="esse-title">Что? Зачем? Почему?</h1>
+                <p class="esse-text" style='text-align:left'>
+                    В наше время, когда компьютерные технологии развиваются очень быстро, есть множество причин чтобы
+                    стать программистом. Моя главная цель нахождения здесь - получение ценных знаний и опыта в данной
+                    области.
+                </p>
+                <p class="esse-text" style="margin-top: 0">
+                    Сейчас каждый может начать изучать программирование, но чтобы стать воистину востребованным
+                    специалистом на рынке труда нужно приложить не мало усилий. Чтобы найти в ближайшем будущем работу,
+                    я должен усердно работать над собой, именно поэтому я сейчас нахожусь здесь и создаю полное
+                    извращение в плане кода.
+                </p>
+                <a id="original-esse" href="esse.html">Оригинальная страничка</a>
+            </div>
+        </div>
+        <div class="content-item hide" id='shotContent'>
+            <canvas class='target' width="350px" height="350px"></canvas>
+            <div id="coord-place">
+                <input class="coord" id="x" placeholder='x'>
+                <input class='coord' id="y" placeholder='y'>
+            </div>
+            <div class="shoot-button-area">
+                <button class="button-shot" id="shot">Выстрелить</button>
+                <button class="button-shot" id='shotClear'>Очистить</button>
+            </div>
+            <span class="result" id="shotResult"></span>
+        </div>
+        <div class='content-item hide' id="shoterContent">
+            <canvas class='target' width="350px" height="350px"></canvas>
+            <div id="shooter-place">
+                <input class="shooter-input" id="min" placeholder='min'>
+                <input class="shooter-input" id="max" placeholder='max'>
+                <input class="shooter-input" id="shotCount" placeholder='Выстрелы'>
+            </div>
+            <div class="shoot-button-area">
+                <button class="button-shot" id='shots'>Расстрелять</button>
+                <button class="button-shot" id='shotsClear'>Очистить</button>
+            </div>
+            <span class="result" id='shotsResult'></span>
+        </div>
+        <div class="content-item hide" id="rootsContent">
+            <div id="coefs-area">
+                <input class="coefs" id="a" placeholder="a">
+                <input class="coefs" id="b" placeholder="b">
+                <input class="coefs" id="c" placeholder="c">
+                <input class="coefs" id="d" placeholder="d">
+                <input class="coefs" id="e" placeholder="e">
+            </div>
+            <button id="calcRoots">Найти корни</button>
+            <div>
+
+                <span id="rootsResult"></span>
+            </div>
+        </div>
+        <div class="content-item hide" id="RPGContent">
+            <div class="img-area">
+                <img id="picture" src="img/Welcome.jpg">
+                <div class="questTextArea">
+                    <p id="questText">Начнём наше приключение?</p>
+                    <div class="hide" id="nextTextQuest">>>></div>
+                </div>
+            </div>
+            <div class="questButtonsArea">
+                <div class="answerQuestButtonArea">
+                </div>
+                <div class="beginEndArea">
+                    <div class="beginButton beginContinueButton">Начать</div>
+                    <div class="continueButton beginContinueButton hide">Продолжить</div>
+                    <div class="questStatistics">
+                        <div class="status questStat ">Погоняло</div>
+                        <div class="age questStat">Возраст:</div>
+                        <div class="happiness questStat">Счастье:</div>
+                        <div class="satiety questStat">Насыщение:</div>
+                        <div class="money questStat">Деньги:</div>
+                        <div class="knowledge questStat">Знания:</div>
+                    </div>
+                </div>
+                <div class="dayCounterArea">
+                    <span class="dayCounter"></span>
+                </div>
+            </div>
+        </div>
+        <div class="content-item hide" id="graphContent">
+            <canvas id="graph"></canvas>
+            <div class="container">
+                <div class="menuGraphButton"></div>
+                <div class="funcMenu">
+                    <div class="addFunction">Добавить</div>
+                    <div class="funcs-сontainer"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
