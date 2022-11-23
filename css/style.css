@@ -431,11 +431,9 @@ body {
     border-bottom-left-radius: 18px;
     scrollbar-gutter: stable;
     transition: 1s;
-    transform: translateX(-100%);
 }
 
 .containerActive {
-    transform: translateX(0%);
     width: 500px;
 }
 
