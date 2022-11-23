@@ -1,0 +1,572 @@
+body {
+    background-color: #0ABAB5;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    overflow-y: hidden;
+}
+
+.hide {
+    display: none;
+}
+
+.menu {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.menu-item {
+    background-color: #51bfd3bb;
+    border: solid 1px rgb(221, 100, 19);
+    border-radius: 20px;
+    width: 150px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    margin: 5px;
+    cursor: pointer;
+    font-size: large;
+    transition: .5s;
+    user-select: none;
+}
+
+.menu-item:hover {
+    background-color: #37a7bbbb;
+}
+
+.menu-item:active {
+    transform: translateY(1px);
+}
+
+.activated {
+    border-color: green;
+    background-color: #37a7bbbb;
+    transform: translateY(1px);
+    box-shadow: 0px 0px 0 2px rgba(33, 187, 27, 0.39);
+}
+
+.work-area {
+    background-color: #10ccc6;
+    width: 1200px;
+    height: 800px;
+    border: solid 5px black;
+    border-radius: 20px;
+}
+
+.target {
+    width: 400px;
+    height: 400px;
+    margin-left: 400px;
+    margin-top: 40px;
+    background-color: white;
+}
+
+.coord {
+    width: 50px;
+    height: 25px;
+    border-radius: 20px;
+    text-align: center;
+    display: inline-block;
+}
+
+#coord-place {
+    margin-left: 541px;
+}
+
+.button-shot {
+    height: 30px;
+    width: 100px;
+    background-color: rgb(41, 185, 89);
+    border-radius: 20px;
+    border: none;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: .1s;
+    user-select: none;
+}
+
+.button-shot:hover {
+    background-color: rgb(49, 165, 126);
+
+}
+
+.button-shot:active {
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    transform: translateY(2px);
+}
+
+.shoot-button-area {
+    margin-left: 500px;
+    margin-top: 10px;
+}
+
+.result {
+    position: absolute;
+    margin-left: 540px;
+    margin-top: 30px;
+    font-size: 20px;
+    font-family: 'Сomic Sans MS', cursive;
+}
+
+.shooter-input {
+    text-align: center;
+    border-radius: 20px;
+    width: 70px;
+    height: 25px;
+}
+
+#shooter-place {
+    margin-left: 480px;
+}
+
+#esse-area {
+    background-color: rgb(218, 188, 149);
+    padding-left: 1140px;
+    padding-top: 740px;
+    margin: 30px;
+}
+
+#esse-title {
+    margin-top: -700px;
+    margin-left: -700px;
+    font-style: italic;
+}
+
+.esse-text {
+    text-indent: 25px;
+    font-size: 30px;
+    font-family: "NICHTLUSTIG22", cursive;
+    margin-bottom: 0;
+    margin-top: 5px;
+    margin-left: -1100px;
+}
+
+#original-esse {
+    text-align: center;
+    padding-right: 3px;
+    padding-left: 3px;
+    position: absolute;
+    text-decoration: none;
+    margin-left: -200px;
+    margin-top: 230px;
+    border-radius: 20px;
+    border: 1px solid black;
+    color: black;
+    transition: .1s;
+    user-select: none;
+}
+
+#original-esse:active {
+    transform: translateY(2px);
+}
+
+.coefs {
+    width: 40px;
+    border-radius: 20px;
+    text-align: center;
+    height: 25px;
+    margin: 10px
+}
+
+#coefs-area {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5px;
+}
+
+#calcRoots {
+    margin-left: 550px;
+    background-color: #72e9b7;
+    border-radius: 10px;
+    height: 30px;
+    width: 100px;
+    cursor: pointer;
+    border: none;
+    user-select: none;
+}
+
+#calcRoots:hover {
+    background-color: #58b890;
+}
+
+#calcRoots:active {
+    transform: translateY(1px)
+}
+
+#rootsResult {
+    margin-left: 20px;
+}
+
+.img-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px
+}
+
+#picture {
+    width: 900px;
+    border: 2px solid black;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    height: 400px;
+    border-bottom: 0.5px solid black;
+    user-select: none;
+}
+
+.questTextArea {
+    background-color: rebeccapurple;
+    width: 900px;
+    border: 2px solid black;
+    text-align: center;
+    height: 70px;
+    border-top: none;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    user-select: none;
+}
+
+#questText {
+    line-height: 30px;
+    margin-right: 30px;
+    margin-left: 30px;
+    margin-top: 5px;
+    width: 800px;
+    font-size: 22px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#nextTextQuest {
+    background-color: rgb(131, 131, 192);
+    width: 50px;
+    border-bottom-right-radius: 18px;
+    padding-top: 25px;
+    padding-bottom: 25.5px;
+    cursor: pointer;
+    text-align: center;
+    user-select: none;
+}
+
+#nextTextQuest:active {
+    transform: translateX(0.4px);
+}
+
+.answerButtons {
+    height: 310px;
+    border-bottom-left-radius: 18px;
+    border-bottom-right-radius: 18px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    user-select: none;
+}
+
+.questButton {
+    height: 50px;
+    width: 200px;
+    background-color: #4f70cc;
+    text-align: center;
+    cursor: pointer;
+    line-height: 50px;
+    border: 1px solid black;
+    font-size: large;
+    transition: .1s;
+    margin-inline: 15px;
+    border-radius: 20px;
+}
+
+.questButton:active {
+    transform: translateY(1px);
+}
+
+.questButtonsArea {
+    height: 310px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+.answerQuestButtonArea {
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    user-select: none;
+    width: 100%;
+}
+
+.beginEndArea {
+    height: 50%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    user-select: none;
+
+}
+
+.beginContinueButton {
+    height: 45px;
+    width: 150px;
+    margin-inline: 15px;
+    cursor: pointer;
+    text-align: center;
+    line-height: 45px;
+    border: 0.5px solid black;
+    border-radius: 20px;
+    transition: .1s;
+}
+
+.beginContinueButton:active {
+    transform: translateY(2px);
+}
+
+.beginButton {
+    background-color: rgb(49, 175, 49);
+}
+
+.continueButton {
+    background-color: rgb(98, 182, 20);
+}
+
+.restartButtton {
+    background-color: rgb(175, 89, 89);
+}
+
+.dayCounterArea {
+    display: flex;
+    height: 16%;
+    align-items: center;
+    justify-content: center;
+}
+
+.dayCounter {
+    font-family: 'Сomic Sans MS', cursive;
+    font-size: 30px;
+}
+
+.questStatistics {
+    height: 170px;
+    width: 300px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    background-color: antiquewhite;
+    margin-right: -900px;
+    margin-bottom: -85px;
+    border-bottom-right-radius: 15px;
+    border-top-left-radius: 15px;
+}
+
+.questStat {
+    margin-left: 10px;
+    font-size: large;
+    margin-top: 10px;
+    margin-bottom: -6px;
+    user-select: text;
+}
+
+.status {
+    margin-left: 40%;
+}
+
+#graph {
+    cursor: grab;
+    border: 1px solid black;
+    border-radius: 20px;
+}
+
+#graph:active {
+    cursor: grabbing;
+}
+
+.funcs-сontainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.funcBlock input::-webkit-outer-spin-button,
+.funcBlock input::-webkit-inner-spin-button {
+    appearance: none;
+}
+
+.funcBlock {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2px;
+    width: 80%;
+}
+
+.funcBlock input {
+    margin: 1px;
+    text-align: center;
+    outline: none;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(212, 158, 86);
+    width: 0;
+    height: 800px;
+    max-height: 100%;
+    top: -805px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 18px;
+    scrollbar-gutter: stable;
+    transition: 1s;
+    transform: translateX(-100%);
+}
+
+.containerActive {
+    transform: translateX(0%);
+    width: 500px;
+}
+
+.menuGraphButton {
+    position: absolute;
+    border-radius: 50%;
+    top: 0;
+    right: -30px;
+    height: 30px;
+    width: 30px;
+    background-color: rgb(67, 166, 196);
+    cursor: pointer;
+}
+
+.funcMenu {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.deleteFunc {
+    width: 15px;
+    height: 15px;
+    background-color: azure;
+    text-align: center;
+    line-height: 15px;
+    user-select: none;
+    border-radius: 5px;
+}
+
+.deleteFunc:hover {
+    background-color: rgb(218, 79, 79);
+}
+
+.addFunction {
+    width: 90px;
+    height: 20px;
+    margin-top: 5px;
+    text-align: center;
+    background-color: azure;
+    border-radius: 5px;
+    user-select: none;
+    transition: .1s;
+}
+
+.addFunction:hover {    
+    background-color: rgb(208, 245, 245);
+}
+
+.addFunction:active {
+    transform: translateY(2px);
+}
+
+.addFunction:hover,
+.deleteFunc:hover {
+    cursor: pointer;
+}
+
+
+
+.switch-btn {
+    display: inline-block;
+    width: 30px;
+    height: 15px;
+    border-radius: 19px;
+    background: #bfbfbf;
+    z-index: 0;
+    margin: 0;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    transition-duration: 300ms;
+}
+
+.switch-btn::after {
+    content: "";
+    height: 16px;
+    width: 16px;
+    border-radius: 17px;
+    background: #fff;
+    left: 0;
+    transition-duration: 300ms;
+    position: absolute;
+    z-index: 1;
+}
+
+.switch-on {
+    background: #118c4e;
+}
+
+.switch-on::after {
+    left: 15px;
+}
+
+.inputColor {
+    border-radius: 50%;
+    background-color: transparent;
+    height: 25px;
+    width: 26px;
+    border: none;
+    outline: none;
+    appearance: none;
+    cursor: pointer;
+}
+
+.inputColor::-webkit-color-swatch-wrapper {
+    padding: 0;
+}
+
+.inputColor::-webkit-color-swatch {
+    border: none;
+    border-radius: 50%;
+}
+
+.inputA,
+.inputB {
+    width: 30px;
+}
+
+.inputWidth,
+.inputFunc {
+    width: 60px;
+}
+
+.inputA,
+.inputB,
+.inputWidth,
+.inputFunc {
+    background-color: white;
+    border: 1px solid chocolate;
+    border-radius: 10px;
+}
