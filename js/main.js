@@ -31,7 +31,7 @@ function rootsHandler() {
 
 
 function menuHandler(event) {
-    var contents = document.querySelectorAll('.content-item');
+    var contents = document.querySelectorAll('.content-item'),
     menuItems = document.querySelectorAll('.menu-item');
     for (var i = 0; i < contents.length; i++) {
         contents[i].classList.add('hide');
